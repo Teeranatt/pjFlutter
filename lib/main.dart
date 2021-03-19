@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         /*3*/
-        FavoriteWidget(),
+        FavoriteWidget(), //step4 เรียกใช้ state FavoriteWidget()
       ],
     ),
   );
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TapboxA()),
+                  MaterialPageRoute(builder: (context) => TapboxA()), //เรียกใช้ TapboxA() ใน favoriteA.dart เมื่อกด ไอคอน home_rounded ที่มีข้อความว่า หน้าหลัก
                 );
               },
               child: _buildButtonColumn(color, Icons.home_rounded, 'หน้าหลัก')),
@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ParentWidget()),
+                  MaterialPageRoute(builder: (context) => ParentWidget()),//เรียกใช้ ParentWidget() ใน favoriteB.dart เมื่อกด ไอคอน favorite ที่มีข้อความว่า ถูกใจ
                 );
               },
               child: _buildButtonColumn(color, Icons.favorite, 'ถูกใจ')),
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ParentWidgetC()),
+                  MaterialPageRoute(builder: (context) => ParentWidgetC()),//เรียกใช้ ParentWidgetC ใน favoriteC.dart เมื่อกด ไอคอน share ที่มีข้อความว่า แบ่งปัน
                 );
               },
               child: _buildButtonColumn(color, Icons.share, 'แบ่งปัน')),
@@ -165,16 +165,16 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class FavoriteWidget extends StatefulWidget {
+class FavoriteWidget extends StatefulWidget { //step  2 
   @override
-  _FavoriteWidgetState createState() => _FavoriteWidgetState();
+  _FavoriteWidgetState createState() => _FavoriteWidgetState(); //เรียกใช้ _FavoriteWidgetState()
 }
 
-class _FavoriteWidgetState extends State<FavoriteWidget> {
+class _FavoriteWidgetState extends State<FavoriteWidget> {  // step3  Subclass State สร้างตัวแปรเก็บค่าเพื่อเรียกใช้งาน
   bool _isFavorited = true;
   int _favoriteCount = 80;
 
-  void _toggleFavorite() {
+  void _toggleFavorite() { //step4 เมื่อมีการคลิกที่ดาว
     setState(() {
       if (_isFavorited) {
         _favoriteCount -= 1;
@@ -186,7 +186,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
     });
   }
 
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { //step 3
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -197,13 +197,13 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
             alignment: Alignment.centerRight,
             icon: (_isFavorited ? Icon(Icons.star) : Icon(Icons.star_border)),
             color: Colors.red[500],
-            onPressed: _toggleFavorite,
+            onPressed: _toggleFavorite, //เมื่อกดเรียกใช้ฟังก์ชั่น  _toggleFavorite
           ),
         ),
         SizedBox(
           width: 18,
           child: Container(
-            child: Text('$_favoriteCount'),
+            child: Text('$_favoriteCount'), //แสดงค่า _favoriteCount = 80
           ),
         ),
       ],

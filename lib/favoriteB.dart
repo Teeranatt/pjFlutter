@@ -6,7 +6,7 @@ class ParentWidget extends StatefulWidget {
 }
 
 class _ParentWidgetState extends State<ParentWidget> {
-  bool _active = false;
+  bool _active = false; //ค่าเริ่มต้น 
 
   void _handleTapboxChanged(bool newValue) {
     setState(() {
@@ -17,7 +17,7 @@ class _ParentWidgetState extends State<ParentWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: TapboxB(
+      child: TapboxB( //เรียกใช้ stateless TapboxB
         active: _active,
         onChanged: _handleTapboxChanged,
       ),
@@ -32,7 +32,7 @@ class TapboxB extends StatelessWidget {
       : super(key: key);
 
   final bool active;
-  final ValueChanged<bool> onChanged;
+  final ValueChanged<bool> onChanged;// onChanged เรียกใช้ ValueChanged<bool>
 
   void _handleTap() {
     onChanged(!active);
