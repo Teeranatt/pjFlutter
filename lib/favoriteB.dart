@@ -1,57 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:myapp1/main.dart';
 
-class ParentWidget extends StatefulWidget {
+class firstPage3 extends StatefulWidget {
   @override
-  _ParentWidgetState createState() => _ParentWidgetState();
+  _firstPageState3 createState() => _firstPageState3();
 }
 
-class _ParentWidgetState extends State<ParentWidget> {
-  bool _active = false; //ค่าเริ่มต้น 
-
-  void _handleTapboxChanged(bool newValue) {
-    setState(() {
-      _active = newValue;
-    });
-  }
-
+class _firstPageState3 extends State<firstPage3> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: TapboxB( //เรียกใช้ stateless TapboxB
-        active: _active,
-        onChanged: _handleTapboxChanged,
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.pink[100],
+        title: Text("Tensei Shitara Slime Datta Ken"),
       ),
-    );
-  }
-}
-
-//------------------------- TapboxB ----------------------------------
-
-class TapboxB extends StatelessWidget {
-  TapboxB({Key key, this.active: false, @required this.onChanged})
-      : super(key: key);
-
-  final bool active;
-  final ValueChanged<bool> onChanged;// onChanged เรียกใช้ ValueChanged<bool>
-
-  void _handleTap() {
-    onChanged(!active);
-  }
-
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: _handleTap,
-      child: Container(
-        child: Center(
-          child: Text(
-            active ? 'Active' : 'Inactive',
-            style: TextStyle(fontSize: 32.0, color: Colors.white),
-          ),
-        ),
-        width: 200.0,
-        height: 200.0,
-        decoration: BoxDecoration(
-          color: active ? Colors.lightGreen[700] : Colors.grey[600],
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Container(
+              child: Column(children: <Widget>[
+                Image.asset(
+                  'images/slime4.jpg',
+                  height: 300,
+                ),
+              ]),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 270, left: 30, right: 30),
+              child: Column(
+                children: [
+                  Text("Tensei Shitara Slime Datta Ken"),
+                  Text(""),
+                  Text(
+                      "เรื่องย่อ : มิคามิ ซาโตรุ  หนุ่มโสด ไม่เคยมีแฟน วัย 37 ปี ถูกแทงตายเพราะช่วยเพื่อนจากคนร้าย เขาได้เกิดใหม่ในต่างโลกด้วยร่างของสไลม์ ได้พบมังกร เวรุโดร่า ผู้ถูกผนึกมาร่วม 3 ร้อยปีและรู้ว่าเขามาจากต่างโลก ด้วยความเบื่อหน่ายในชีวิตจึงยอมเป็นเพื่อนกับสไลม์ ตั้งชื่อให้เขา “ริมุรุ” และให้เขากลืนตนเข้าไปในร่าง ด้วย2 ความสามารถ “นักล่า” ที่ทำให้เขาสามารถชิงความสามารถของผู้ถูกกลืน และ “ปราชญ์ผู้ยิ่งใหญ่” ทำให้เขาเข้าใจเรื่องราวในโลกใหม่ ส่งผลให้เขาพัฒนาเป็นสไลม์ที่น่าเกรงขามต่อเหล่ามอนสเตอร์ทั่วไป จนกลายเป็นปีศาจที่ยิ่งใหญ่ในภายหลัง"),
+                  Text(""),FavoriteWidget(),
+                  
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );

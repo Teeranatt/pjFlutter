@@ -45,7 +45,12 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets: 
-    - images/slime4.jpg
+    - images/Slime4.jpg
+    - images/overlord.jpg
+    - images/slime3.jpg
+    - images/Best_New_Anime_Series_2017_Cover.jpg
+    - images/overlord2.jpg
+    - images/attack on titan.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

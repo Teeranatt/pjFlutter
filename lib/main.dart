@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '転生したらスライムだった件件',
+      title: 'เกือบจะโอตาคุ',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
-      home: MyHomePage(title: '転生したらスライムだった件件'),
+      home: MyHomePage(title: 'เกือบจะโอตาคุ'),
     );
   }
 }
@@ -53,14 +53,14 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
-                  'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว',
+                  'เกือบจะโอตาคุ',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
               Text(
-                'อนิเมะ,มังงะ,นิยาย',
+                'อนิเมะ',
                 style: TextStyle(
                   color: Colors.grey[500],
                 ),
@@ -69,15 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         /*3*/
-        FavoriteWidget(), //step4 เรียกใช้ state FavoriteWidget()
+       //step4 เรียกใช้ state FavoriteWidget()
       ],
     ),
   );
 
   Widget textSection = Container(
     padding: const EdgeInsets.all(32),
-    child: Text(
-      'มิคามิ ซาโตรุ หนุ่มโสด ไม่เคยมีแฟน วัย 37 ปี ถูกแทงตายเพราะช่วยเพื่อนจากคนร้าย เขาได้เกิดใหม่ในต่างโลกด้วยร่างของสไลม์ ได้พบมังกร เวรุโดร่า ผู้ถูกผนึกมาร่วม 3 ร้อยปีและรู้ว่าเขามาจากต่างโลก ด้วยความเบื่อหน่ายในชีวิตจึงยอมเป็นเพื่อนกับสไลม์ ตั้งชื่อให้เขา “ริมุรุ” และให้เขากลืนตนเข้าไปในร่าง ด้วย2 ความสามารถ “นักล่า” ที่ทำให้เขาสามารถชิงความสามารถของผู้ถูกกลืน และ “ปราชญ์ผู้ยิ่งใหญ่” ทำให้เขาเข้าใจเรื่องราวในโลกใหม่ ส่งผลให้เขาพัฒนาเป็นสไลม์ที่น่าเกรงขามต่อเหล่ามอนสเตอร์ทั่วไป จนกลายเป็นปีศาจที่ยิ่งใหญ่ในภายหลัง',
+    child: Text(' ประวัติ : ประเทศญี่ปุ่นเริ่มผลิตภาพยนตร์แอนิเมชั่นในเชิงพาณิชย์ตั้งแต่ปี ค.ศ. 1917 แต่ภาพลักษณ์ในฐานะสื่อสำหรับเด็กของภาพยนตร์การ์ตูนทำให้การเผยแพร่ยังมีอยู่อย่างจำกัด และแผ่นดินไหวใหญ่ในที่ราบคันโตเมื่อ ปี 1923 ทำให้สตูดิโอและงานในยุคแรกเริ่มถูกทำลายไปเป็นจำนวนมาก. การ์ตูนอนิเมะเรื่องยาวเรื่องแรก คือ โมโมทาโร่ อุมิโนะชินเปอิ (桃太郎 海の神兵) หรือ โมโมทาโร่ ทหารเทพแห่งท้องทะเล ซึ่งถูกสร้างขึ้นโดยราชนาวีของจักรวรรดิ์ญี่ปุ่น ในปี ค.ศ. 1944 เพื่อใช้ในการโฆษณาชวนเชื่อในระหว่างสงคราม. พอถึงยุคหลังสงครามความนิยมในภาพยนตร์แอนิเมชั่นก็ได้รับการฟื้นฟูเป็นลำดับ. จนกระทั่งในทศวรรศที่ 1960 นักสร้างแอนิเมชั่นอย่าง เทะซิกะ โอซามุ ได้บุกเบิกเทคนิคในการสร้างภาพยนตร์การ์ตูนในญี่ปุ่น โดยการศึกษาเลียนแบบเทคนิคของนักทำแอนิเมชั่นของดิสนีย์และคิดหาทางลดความยุ่งยากและค่าใช้จ่ายลง. ผลงานของโอซามุได้รับความนิยมแพร่หลายไปนอกประเทศญี่ปุ่น และได้รับฉายทั้งในอเมริกาและประเทศในยุโรปหลายเรื่อง. พอถึงปลายปี 1970 ภาพยนตร์การ์ตูนญี่ปุ่นได้พัฒนาลักษณะเฉพาะตัวขึ้นจนสามารถแบ่งแยกออกจากภาพยนตร์การ์ตูนของสหรัฐอเมริกาได้อย่างชัดเจน. ในทศวรรษที่ 1980 อนิเมะได้รับความนิยมกว้างขวางในญี่ปุ่น ทำให้ธุรกิจการสร้างอนิเมะเจริญเติบโตอย่างรวดเร็ว และในทศวรรษที่ 1990 และ 2000 ชื่อเสียงของอนิเมะได้แพร่ขยายไปยังนอกประเทศญี่ปุ่น พร้อม ๆ กับการขยายตัวของตลาดอนิเมะนอกประเทศสำหรับคนที่ชื่นชอบ',
       softWrap: true,
     ),
   );
@@ -93,38 +92,38 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TapboxA()), //เรียกใช้ TapboxA() ใน favoriteA.dart เมื่อกด ไอคอน home_rounded ที่มีข้อความว่า หน้าหลัก
+                  MaterialPageRoute(builder: (context) => firstPage2()), //เรียกใช้ TapboxA() ใน favoriteA.dart เมื่อกด ไอคอน home_rounded ที่มีข้อความว่า หน้าหลัก
                 );
               },
-              child: _buildButtonColumn(color, Icons.home_rounded, 'หน้าหลัก')),
+              child: _buildButtonColumn(color, Icons.favorite, 'อันดับ 1')),
           GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ParentWidget()),//เรียกใช้ ParentWidget() ใน favoriteB.dart เมื่อกด ไอคอน favorite ที่มีข้อความว่า ถูกใจ
+                  MaterialPageRoute(builder: (context) => firstPage3()),//เรียกใช้ ParentWidget() ใน favoriteB.dart เมื่อกด ไอคอน favorite ที่มีข้อความว่า ถูกใจ
                 );
               },
-              child: _buildButtonColumn(color, Icons.favorite, 'ถูกใจ')),
+              child: _buildButtonColumn(color, Icons.favorite, 'อันดับ 2')),
           GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ParentWidgetC()),//เรียกใช้ ParentWidgetC ใน favoriteC.dart เมื่อกด ไอคอน share ที่มีข้อความว่า แบ่งปัน
+                  MaterialPageRoute(builder: (context) => firstPage()),//เรียกใช้ ParentWidgetC ใน favoriteC.dart เมื่อกด ไอคอน share ที่มีข้อความว่า แบ่งปัน
                 );
               },
-              child: _buildButtonColumn(color, Icons.share, 'แบ่งปัน')),
+              child: _buildButtonColumn(color, Icons.favorite, 'อันดับ 3')),
         ],
       ),
     );
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว (Tensei shitara Slime Datta Ken)'),
+        title: Text('เกือบจะโอตาคุ'),
       ),
       body: ListView(
         children: <Widget>[
           Image.asset(
-            'images/slime4.jpg',
+            'images/Best_New_Anime_Series_2017_Cover.jpg',
             width: 600,
             height: 240,
             fit: BoxFit.cover,
